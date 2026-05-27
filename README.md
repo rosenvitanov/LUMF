@@ -37,5 +37,16 @@ To maintain system integrity and ease of use, a LUMF workspace uses the followin
 └── Archive/           # Location for finished and old files
 ```
 
+## System Templates
+- **[Task Template](.system/templates/task_template.md)**: Blank template for creating a new task.
+- **[Project Template](.system/templates/project_template.md)**: Blank template for starting a new project.
+
+## Examples
+To help you understand how files interconnect, check out these examples:
+- **[Bathroom Renovation Project](examples/202605271200-P1R1-bathroom-renovation.md)** (Parent Project)
+- **[Buy Tiles](examples/202605271205-T1S1-buy-tiles.md)** (Active task, blocks the next one)
+- **[Install Tiles](examples/202605271210-T2S2-install-tiles.md)** (Blocked task, waiting for materials)
+
 ## Further Documentation
 - **[YAML Schema Specification](docs/yaml_schema.md)**: Detailed explanation of all supported YAML frontmatter fields.
+
