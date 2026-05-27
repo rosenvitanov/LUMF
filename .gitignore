@@ -1,0 +1,17 @@
+# Системни файлове и кеш на LUMF
+.system/cache/
+
+# Syncthing конфликтни файлове
+*.sync-conflict-*
+.stfolder/
+.stversions/
+
+# Операционна система
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Редактори и IDE
+.vscode/
+.idea/
+*.swp
