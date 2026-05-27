@@ -14,6 +14,7 @@ LUMF (Linked Unit Markdown Format) is a decentralized, local-first format for ma
 1. **Source of Truth**: The `.md` files are the only source of truth. Any database or index is just a transient cache.
 2. **Atomic Units**: One logical unit (task, note, project) = One file. This minimizes sync conflicts when used with Syncthing or Git.
 3. **Graph Network**: Files are connected to each other using explicit YAML links (`parent`, `children`, `blocked_by`), forming a Directed Acyclic Graph (DAG).
+4. **Easy Synchronization**: Designed from the ground up for seamless syncing across all your devices using tools like Syncthing or Git, without the risk of database corruption.
 
 ## File Naming Convention
 To avoid synchronization collisions and maintain human readability, every file follows this strict naming structure:
