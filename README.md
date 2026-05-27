@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="assets/lumf_logo_white.png" alt="LUMF Logo" width="800" />
+</p>
+
 # LUMF (Linked Unit Markdown Format)
+
+*A project by* <img src="assets/river_lab.png" height="25" align="absmiddle" /> **RiverLab**
 
 🌍 *[Български](README.bg.md)*
 
