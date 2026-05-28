@@ -6,6 +6,11 @@
 
 *A project by* <img src="assets/river_lab.png" height="25" align="absmiddle" /> **RiverLab**
 
+![Format](https://img.shields.io/badge/Format-Markdown%20%2B%20YAML-blue)
+![Status](https://img.shields.io/badge/Status-Draft%20v1.0-orange)
+![Paradigm](https://img.shields.io/badge/Paradigm-Local--first-success)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 🌍 *[Български](README.bg.md)*
 
 LUMF (Linked Unit Markdown Format) is a decentralized, local-first format for managing notes, tasks, reminders, and projects. It is built entirely on plain text (Markdown) and structured data (YAML), ensuring that the data is always readable, future-proof, and completely owned by the user.
@@ -15,6 +20,51 @@ LUMF (Linked Unit Markdown Format) is a decentralized, local-first format for ma
 2. **Atomic Units**: One logical unit (task, note, project) = One file. This minimizes sync conflicts when used with Syncthing or Git.
 3. **Graph Network**: Files are connected to each other using explicit YAML links (`parent`, `children`, `blocked_by`), forming a Directed Acyclic Graph (DAG).
 4. **Easy Synchronization**: Designed from the ground up for seamless syncing across all your devices using tools like Syncthing or Git, without the risk of database corruption.
+
+## Why for Developers?
+LUMF is designed with developer experience (DX) in mind:
+* **Zero Vendor Lock-in & Easy Parsing:** Relies on standard YAML and Markdown. No binary blobs, proprietary APIs, or hidden databases.
+* **CLI Friendly:** You can filter, search, and mutate your database using basic terminal tools (`grep`, `awk`, `sed`, `ripgrep`).
+* **Git/VCS Compatibility:** Unlike SQLite or JSON dumps, LUMF results in a perfect `diff` when tracking state changes over time.
+* **Automation Freedom:** It's trivial to write local scripts, cron jobs, or Git hooks that react to task statuses like `todo` or `blocked`.
+
+## Scripting & Automation Examples
+LUMF shines when you build simple scripts around it.
+
+**Find all blocked tasks via ripgrep:**
+```bash
+rg "status: blocked" ./Projects -l
+```
+
+**Extract task dependencies via Python:**
+```python
+import frontmatter
+import glob
+
+for file in glob.glob("*.md"):
+    post = frontmatter.load(file)
+    if post.get('status') == 'todo':
+        print(f"Task: {post['title']} | Blocks: {post.get('blocking', 'None')}")
+```
+*For more scripts, API wrappers, and workflows, see [docs/scripts_and_automation.md](docs/scripts_and_automation.md).*
+
+## Tooling & Ecosystem Ideas
+The format is designed as a foundation for a broader toolset:
+* **CLI Managers:** Fast task logging directly from the terminal.
+* **Editor Extensions:** Linters and autocomplete tools for VS Code/Neovim.
+* **Language SDKs:** Ready-to-use parsers for Python, Rust, Go, etc.
+
+*Read more about expanding the format in [docs/ecosystem_and_tooling.md](docs/ecosystem_and_tooling.md).*
+
+## LUMF vs Existing Solutions
+
+| Feature | **LUMF** | Notion / Jira | Obsidian / Logseq | JSON / SQLite |
+| :--- | :---: | :---: | :---: | :---: |
+| **Human Readable (Raw)** | 🟢 Yes (Excellent) | 🔴 No | 🟢 Yes | 🟡 Moderate / Poor |
+| **Data Ownership** | 🟢 100% Local | 🔴 Cloud (Locked) | 🟢 100% Local | 🟢 100% Local |
+| **Git Diff / VCS Friendly** | 🟢 Perfect `diff` | 🔴 N/A | 🟢 Good | 🔴 Poor (Conflicts) |
+| **Native Dependency Logic** | 🟢 Built-in YAML | 🟢 Built-in | 🟡 Requires Plugins | 🟢 Schema dependent|
+| **Needs App to Parse** | 🟢 No (Text editor) | 🔴 Yes | 🟡 Optional | 🔴 Yes |
 
 ## File Naming Convention
 To avoid synchronization collisions and maintain human readability, every file follows this strict naming structure:
