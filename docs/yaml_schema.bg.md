@@ -16,11 +16,21 @@
 ## 2. Функционални Полета (Опционални)
 Използват се предимно за задачи, проекти и напомняния.
 
-* `status` *(String)*: Текущо състояние. Стойности: `todo`, `doing`, `done`, `blocked`, `ready`, `cancelled`.
+* `status` *(String)*: Текущо състояние. Стойности: `todo`, `in_progress`, `blocked`, `failed`, `done`, `cancelled`.
+* `status_reason` *(String)*: Причина за `blocked`/`failed` (напр. `blocked_by_materials`).
 * `priority` *(String)*: Приоритет. Стойности: `low`, `medium`, `high`, `critical`. 
+* `start_after` *(Date/Time)*: Най-ранна дата/час за започване (напр. `YYYY-MM-DD`).
 * `due` *(Date/Time)*: Краен срок за изпълнение (напр. `YYYY-MM-DD`).
+* `duration_estimate` *(String)*: Оценка на продължителност (напр. `2d`, `6h`, `90m`).
 * `color` *(String)*: Визуален маркер. Може да е семантично име (`red`, `urgent-red`) или Hex код (`#ff5733`).
 * `context` *(Array)*: Масив от контексти / тагове за средата (напр. `[home, office, supermarket, phone]`).
+* `assigned_to` *(Array)*: Включени хора/екипи (involved people), не задължително отговорник (напр. `["Екип монтаж", "Архитект"]`).
+* `location` *(String)*: Локация или помещение (напр. `"Баня"`).
+
+### Custom statuses (гъвкаво)
+За потребителска гъвкавост може да дефинирате собствени статуси, които допълват стандартните.
+
+* `custom_statuses` *(Array)*: Списък с позволени custom статуси (напр. `[waiting_review, waiting_delivery]`).
 
 ## 3. Логически Връзки (Опционални)
 Поддържат графовата връзка (DAG) между файловете.
@@ -65,9 +75,16 @@ extensions:
   custom_billing_id: "BILL-999"
 
 status: todo
+status_reason: blocked_by_materials
 priority: high
+start_after: 2026-05-28
 due: 2026-05-30
+duration_estimate: 2d
 context: [supermarket, driving]
+assigned_to: ["Екип монтаж"]
+location: "Баня"
+
+custom_statuses: [waiting_review, waiting_delivery]
 
 parent: 202605270900-R2D2
 blocked_by: []

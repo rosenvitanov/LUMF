@@ -16,11 +16,21 @@ These fields are mandatory for every LUMF file.
 ## 2. Functional Fields (Optional)
 Used specifically for tasks, reminders, and projects.
 
-* `status` *(String)*: Current state. Default values: `todo`, `doing`, `done`, `blocked`, `ready`, `cancelled`.
+* `status` *(String)*: Current state. Default values: `todo`, `in_progress`, `blocked`, `failed`, `done`, `cancelled`.
+* `status_reason` *(String)*: Reason for `blocked`/`failed` (e.g., `blocked_by_materials`).
 * `priority` *(String)*: Priority level. Values: `low`, `medium`, `high`, `critical`. 
+* `start_after` *(Date/Time)*: Earliest start date/time (e.g., `YYYY-MM-DD`).
 * `due` *(Date/Time)*: Deadline (e.g., `YYYY-MM-DD`).
+* `duration_estimate` *(String)*: Estimated duration (e.g., `2d`, `6h`, `90m`).
 * `color` *(String)*: Visual marker for UI. Can be a semantic name (`red`, `urgent-red`) or a Hex code (`#ff5733`).
 * `context` *(Array)*: List of operational contexts or tags (e.g., `[home, office, supermarket, phone]`).
+* `assigned_to` *(Array)*: Involved people/teams, not necessarily a single owner (e.g., `["Install Team", "Architect"]`).
+* `location` *(String)*: Location or room (e.g., `"Bathroom"`).
+
+### Custom statuses (flexible)
+For user flexibility, you can define custom statuses that complement the standard ones.
+
+* `custom_statuses` *(Array)*: List of allowed custom statuses (e.g., `[waiting_review, waiting_delivery]`).
 
 ## 3. Graph Logic & Relationships (Optional)
 Used for maintaining the directed acyclic graph (DAG) structure.
@@ -65,9 +75,16 @@ extensions:
   custom_billing_id: "BILL-999"
 
 status: todo
+status_reason: blocked_by_materials
 priority: high
+start_after: 2026-05-28
 due: 2026-05-30
+duration_estimate: 2d
 context: [supermarket, driving]
+assigned_to: ["Install Team"]
+location: "Bathroom"
+
+custom_statuses: [waiting_review, waiting_delivery]
 
 parent: 202605270900-R2D2
 blocked_by: []
