@@ -58,13 +58,13 @@ The format is designed as a foundation for a broader toolset:
 
 ## LUMF vs Existing Solutions
 
-| Feature | **LUMF** | Notion / Jira | Obsidian / Logseq | JSON / SQLite |
-| :--- | :---: | :---: | :---: | :---: |
-| **Human Readable (Raw)** | 🟢 Yes (Excellent) | 🔴 No | 🟢 Yes | 🟡 Moderate / Poor |
-| **Data Ownership** | 🟢 100% Local | 🔴 Cloud (Locked) | 🟢 100% Local | 🟢 100% Local |
-| **Git Diff / VCS Friendly** | 🟢 Perfect `diff` | 🔴 N/A | 🟢 Good | 🔴 Poor (Conflicts) |
-| **Native Dependency Logic** | 🟢 Built-in YAML | 🟢 Built-in | 🟡 Requires Plugins | 🟢 Schema dependent|
-| **Needs App to Parse** | 🟢 No (Text editor) | 🔴 Yes | 🟡 Optional | 🔴 Yes |
+| Feature                     | **LUMF**           | Notion / Jira   | Obsidian / Logseq | JSON / SQLite |
+| :--- | :--- | :--- | :--- | :--- |
+| **Human Readable (Raw)**  | 🟢 Yes (Excellent) | 🔴 No           | 🟢 Yes            | 🟡 Moderate / Poor |
+| **Data Ownership**        | 🟢 100% Local      | 🔴 Cloud (Locked)| 🟢 100% Local     | 🟢 100% Local |
+| **Git Diff / VCS Friendly**| 🟢 Perfect `diff`  | 🔴 N/A          | 🟢 Good           | 🔴 Poor (Conflicts) |
+| **Native Dependency Logic**| 🟢 Built-in YAML   | 🟢 Built-in     | 🟡 Requires Plugins| 🟢 Schema dependent |
+| **Needs App to Parse**    | 🟢 No (Text editor)| 🔴 Yes          | 🟡 Optional       | 🔴 Yes        |
 
 ## File Naming Convention
 To avoid synchronization collisions and maintain human readability, every file follows this strict naming structure:
