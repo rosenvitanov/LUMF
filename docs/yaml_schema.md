@@ -36,6 +36,16 @@ Used for maintaining the directed acyclic graph (DAG) structure.
   * `label` *(String)*: What the asset is (e.g., `"Parts Invoice"`).
 * `requires` *(Array)*: Inventory or tools needed to execute the task (e.g., `["Hammer", "2 bags of cement"]`).
 
+## 5. Metadata, Extensibility & Integrity (Optional)
+These blocks provide additional flexibility, security, and future-proofing for the format.
+
+* `metadata` *(Object)*: Container for descriptive and systemic information.
+  * `author` *(String)*: Creator or last editor of the file (e.g., `"John Doe"`, `"SystemBot"`).
+  * `locale` *(String)*: Language and regional settings (e.g., `"bg-BG"`, `"en-US"`).
+  * `dependencies` *(Array)*: External resources, schemas, or plugins required to fully load the file.
+* `extensions` *(Object)*: Isolated container (Custom Data) for user or app-specific data that is not part of the official standard. Parsers can safely ignore this block.
+* `checksum` *(String)*: Hash value (e.g., `sha256-...`) to verify the file's integrity during sync.
+
 ## Example
 ```yaml
 ---
@@ -44,6 +54,15 @@ type: task
 title: "Buy Ceramic Tiles"
 created: 2026-05-27 10:30:00
 updated: 2026-05-27 10:45:00
+
+metadata:
+  author: "Rosen"
+  locale: "en-US"
+  dependencies: ["https://schemas.example.com/tiles_plugin"]
+
+checksum: "sha256-a1b2c3d4e5f6..."
+extensions:
+  custom_billing_id: "BILL-999"
 
 status: todo
 priority: high

@@ -5,6 +5,14 @@ title: ""
 created: YYYY-MM-DD HH:mm:ss
 updated: YYYY-MM-DD HH:mm:ss
 
+metadata:
+  author: ""
+  locale: ""
+  dependencies: []
+
+checksum: ""
+extensions: {}
+
 status: todo
 priority: medium
 color: default
