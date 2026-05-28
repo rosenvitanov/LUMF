@@ -48,11 +48,11 @@ for file in glob.glob("*.md"):
 ```
 *За повече скриптове и автоматизации, вижте [docs/scripts_and_automation.bg.md](docs/scripts_and_automation.bg.md).*
 
-## Идеи за екосистема и инструменти
+## Екосистема и инструменти (🚧 Under construction)
 Тъй като е стандартизиран, форматът позволява изграждане на богата екосистема:
-* **CLI инструменти:** Мениджъри за управление на задачи през терминал (напр. `lumf add "Таск"`).
-* **Разширения (Plugins):** Линтъри и инструменти за VS Code / Neovim.
-* **Language SDKs:** Библиотеки (Parsers) на Python, Rust, Go и др.
+* **(🚧 UNDER DEVELOPMENT) CLI инструменти:** Мениджъри за управление на задачи през терминал (напр. `lumf add "Таск"`).
+* **(🚧 UNDER DEVELOPMENT) Разширения (Plugins):** Линтъри и инструменти за VS Code / Neovim.
+* **(🚧 UNDER DEVELOPMENT) Language SDKs:** Библиотеки (Parsers) на Python, C, C#, bash, power shell.
 
 *Повече за възможностите за разширяване на екосистемата четете в [docs/ecosystem_and_tooling.bg.md](docs/ecosystem_and_tooling.bg.md).*
 
@@ -93,6 +93,9 @@ for file in glob.glob("*.md"):
 │   └── 2026/          # Сортирани по година/тема
 └── Archive/           # Архив за завършени (done/cancelled) задачи
 ```
+
+## Запознай се с файловия формат
+ За да се запознаете с цялостната структура на файловия формат, можете да започнете тук. 
 
 ## Шаблони
 - **[Шаблон за Задача](.system/templates/task_template.md)**: Празен шаблон за създаване на нова задача.

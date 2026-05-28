@@ -48,11 +48,11 @@ for file in glob.glob("*.md"):
 ```
 *For more scripts, API wrappers, and workflows, see [docs/scripts_and_automation.md](docs/scripts_and_automation.md).*
 
-## Tooling & Ecosystem Ideas
+## Tooling & Ecosystem (🚧 Under construction)
 The format is designed as a foundation for a broader toolset:
-* **CLI Managers:** Fast task logging directly from the terminal.
-* **Editor Extensions:** Linters and autocomplete tools for VS Code/Neovim.
-* **Language SDKs:** Ready-to-use parsers for Python, Rust, Go, etc.
+* **(🚧 UNDER DEVELOPMENT) CLI Managers:** Fast task logging directly from the terminal.
+* **(🚧 UNDER DEVELOPMENT) Editor Extensions:** Linters and autocomplete tools for VS Code/Neovim.
+* **(🚧 UNDER DEVELOPMENT) Language SDKs:** Ready-to-use parsers for Python, C, C#, bash, power shell.
 
 *Read more about expanding the format in [docs/ecosystem_and_tooling.md](docs/ecosystem_and_tooling.md).*
 
