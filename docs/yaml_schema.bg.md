@@ -4,6 +4,29 @@
 
 Всеки LUMF файл трябва да започва с YAML блок (Frontmatter), затворен между `---`. Тези метаданни правят файловете четими за машината и позволяват на системата да функционира като децентрализирана база данни.
 
+## Визуално подреждане на блоковете (Препоръчително)
+Въпреки че редът на ключовете в YAML няма значение за парсърите, следването на тази логическа текстова структура отгоре-надолу значително улеснява човешкото око:
+
+```mermaid
+graph TD
+    subgraph YAML ["YAML Frontmatter (отварящ ---)"]
+        direction TB
+        S1["1. Системни Полета<br/><small>(id, type, title, created, updated)</small>"]
+        S2["2. Функционални Полета<br/><small>(status, priority, due, context)</small>"]
+        S3["3. Логически Връзки<br/><small>(parent, children, blocked_by)</small>"]
+        S4["4. Активи и Инвентар<br/><small>(assets, requires)</small>"]
+        S5["5. Метаданни и Сигурност<br/><small>(metadata, extensions, checksum)</small>"]
+        
+        S1 --> S2 --> S3 --> S4 --> S5
+    end
+    
+    style S1 fill:#e3f2fd,stroke:#0288d1,color:#000
+    style S2 fill:#e8f5e9,stroke:#388e3c,color:#000
+    style S3 fill:#fff3e0,stroke:#f57c00,color:#000
+    style S4 fill:#ffe0b2,stroke:#ef6c00,color:#000
+    style S5 fill:#f5f5f5,stroke:#9e9e9e,color:#000
+```
+
 ## 1. Системни Полета (Задължителни)
 Тези полета са задължителни за всеки LUMF файл.
 
