@@ -72,9 +72,9 @@ Every logical unit receives a filename following this strict standard:
 `[YYYYMMDDHHMM]-[XXXX]-[slug].md`  
 
 **Consequences:**  
-* **`YYYYMMDDHHMM`:** Automatically provides a chronological sort order in any standard file manager. Unlike standard Unix timestamps (`1716811200`), this formatting remains inherently human-readable while preserving absolute descending/ascending sort logic. The omission of dashes or dots keeps the filename compact.
-* **`XXXX`:** Precludes naming collisions through a 4-character random alphanumeric string (which provides sufficient entropy for personal and small-team use).
-* **`slug`:** Provides immediate, glanceable context about the file's contents without needing to parse the YAML metadata.
+* **`YYYYMMDDHHMM` (Mandatory):** Automatically provides a chronological sort order in any standard file manager. Unlike standard Unix timestamps (`1716811200`), this formatting remains inherently human-readable while preserving absolute descending/ascending sort logic. The omission of dashes or dots keeps the filename compact.
+* **`XXXX` (Mandatory):** Precludes naming collisions through a 4-character random alphanumeric string (which provides sufficient entropy for personal and small-team use). Together, these two mandatory fields (`YYYYMMDDHHMM-XXXX`) form the core unique `id` of the file.
+* **`slug` (Optional, but highly recommended):** Provides immediate, glanceable context about the file's contents without needing to parse the YAML metadata. The slug can be safely renamed later as long as the unique `id` remains unchanged.
 
 ### Examples and "Reading" the Filename
 To give you a clearer idea, here are a few examples of how files look in practice and how their structure is naturally decoded by a human:

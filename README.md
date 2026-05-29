@@ -78,9 +78,9 @@ To avoid synchronization collisions and maintain human readability, every file f
 
 `[YYYYMMDDHHMM]-[XXXX]-[slug].md`
 
-* **YYYYMMDDHHMM**: Timestamp (e.g., `202605271030`)
-* **XXXX**: A 4-character random alphanumeric suffix to prevent collisions (e.g., `A1B2`)
-* **slug**: A short, human-readable description in lowercase latin characters (e.g., `kitchen-renovation`)
+* **`YYYYMMDDHHMM` (Mandatory)**: Timestamp (e.g., `202605271030`)
+* **`XXXX` (Mandatory)**: A 4-character random alphanumeric suffix to prevent collisions (e.g., `A1B2`)
+* **`slug` (Optional)**: A short, human-readable description in lowercase latin characters (e.g., `kitchen-renovation`)
 
 *Example: `202605271030-A1B2-kitchen-renovation.md`*
 
