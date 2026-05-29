@@ -28,6 +28,13 @@ LUMF is designed with developer experience (DX) in mind:
 * **Git/VCS Compatibility:** Unlike SQLite or JSON dumps, LUMF results in a perfect `diff` when tracking state changes over time.
 * **Automation Freedom:** It's trivial to write local scripts, cron jobs, or Git hooks that react to task statuses like `todo` or `blocked`.
 
+## 📚 Documentation
+Dive into the details in the `docs/` folder:
+1. **[Getting Started](docs/getting_started.md)** – Introduction and how to kick off your workspace.
+2. **[Architecture Decisions (ADR)](docs/architecture_and_spec.md)** – Why LUMF is designed the way it is.
+3. **[Folder Structure](docs/folder_structure.md)** – Recommended way to organize your directories.
+4. **[YAML Specification](docs/yaml_schema.md)** – Detailed reference for all supported frontmatter fields.
+
 ## Scripting & Automation Examples
 LUMF shines when you build simple scripts around it.
 
@@ -78,24 +85,8 @@ To avoid synchronization collisions and maintain human readability, every file f
 *Example: `202605271030-A1B2-kitchen-renovation.md`*
 
 ## Workspace Directory Structure
-To maintain system integrity and ease of use, a LUMF workspace uses the following standard directory structure:
-
-```text
-/LUMF_Workspace (Root)
-├── .system/           # Hidden directory for systemic elements
-│   ├── cache/         # Fast-read transient indexes (not synced)
-│   ├── scripts/       # Automation scripts (e.g., integrity checks, auto-taggers)
-│   └── templates/     # Boilerplate MD files for new tasks or projects
-├── 00_Inbox/          # Unprocessed raw notes or ideas (for quick capture)
-├── Projects/          # Main projects (containing child-tasks or references)
-├── Tasks/             # Standalone tasks
-├── _assets/           # Centralized location for binary files (images, PDFs)
-│   └── 2026/          # Segregated by date/topic for organization
-└── Archive/           # Location for finished and old files
-```
-
-## Getting Started
-To understand the initial concepts and take your first steps with the format, start with the **[Getting Started guide](docs/getting_started.md)**.
+To maintain system integrity and ease of use, a LUMF workspace maintains a basic standard structure, which can be viewed in detail with diagrams at:
+**👉 [Folder Structure Documentation](docs/folder_structure.md)**
 
 ## System Templates
 - **[Task Template](.system/templates/task_template.md)**: Blank template for creating a new task.
