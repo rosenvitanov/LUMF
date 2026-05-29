@@ -94,6 +94,9 @@ To maintain system integrity and ease of use, a LUMF workspace uses the followin
 └── Archive/           # Location for finished and old files
 ```
 
+## Getting Started
+To understand the initial concepts and take your first steps with the format, start with the **[Getting Started guide](docs/getting_started.md)**.
+
 ## System Templates
 - **[Task Template](.system/templates/task_template.md)**: Blank template for creating a new task.
 - **[Project Template](.system/templates/project_template.md)**: Blank template for starting a new project.
