@@ -1,5 +1,7 @@
 # Architecture and Decisions (ADR)
 
+🌍 *[Български](architecture_and_spec.bg.md)* | 🔙 *[Back to README](../README.md)* | 🚀 *[Getting Started](getting_started.md)*
+
 This document outlines the core Architecture Decision Records (ADR) behind LUMF. Its purpose is to answer the question **"Why?"** rather than just "What?". Understanding these underlying concepts will help you get the most out of the format.
 
 ---
@@ -157,3 +159,7 @@ graph TD
     classDef device fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
     class A,B,C device;
 ```
+
+---
+
+👉 **Next step:** [Folder Structure (Workspace)](folder_structure.md)

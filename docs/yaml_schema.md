@@ -1,6 +1,6 @@
 # LUMF YAML Schema Specification
 
-🌍 *[Български](yaml_schema.bg.md)* | 🔙 *[Back to README](../README.md)*
+🌍 *[Български](yaml_schema.bg.md)* | 🔙 *[Back to README](../README.md)* | 🚀 *[Getting Started](getting_started.md)*
 
 Every LUMF file must start with a YAML block (Frontmatter) bounded by `---`. This metadata is what makes the files parsable and allows them to act as a decentralized database.
 
@@ -95,3 +95,7 @@ assets:
     label: "Store Quote"
 ---
 ```
+
+---
+
+👉 **Next step:** [Scripts and Automation (Coming soon)](scripts_and_automation.md)

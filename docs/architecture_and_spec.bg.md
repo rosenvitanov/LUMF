@@ -1,5 +1,7 @@
 # Архитектура и Решения (ADR)
 
+🌍 *[English](architecture_and_spec.md)* | 🔙 *[Обратно към README](../README.bg.md)* | 🚀 *[Getting Started](getting_started.bg.md)*
+
 В този документ ще ви запознаем с основните архитектурни решения (Architecture Decision Records - ADR) зад LUMF. Целта му е да отговори на въпроса **„Защо?“**, а не просто „Какво?“. Разбирането на тези концепции ще ви помогне да извлечете максимума от формата.
 
 ---
@@ -157,3 +159,7 @@ graph TD
     classDef device fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px;
     class A,B,C device;
 ```
+
+---
+
+👉 **Следваща стъпка:** [Структура на папките (Workspace)](folder_structure.bg.md)

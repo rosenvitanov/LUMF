@@ -1,5 +1,7 @@
 # Getting Started with LUMF
 
+🌍 *[Български](getting_started.bg.md)* | 🔙 *[Back to README](../README.md)*
+
 👋 **Hello and welcome!** 
 
 If you're reading this documentation, you're probably someone who loves having complete control over their data, prefers the terminal over bloated GUI applications, and secretly believes that plain text files are the solution to (almost) all problems in the IT world. Thank you for choosing LUMF (Linked Unit Markdown Format) and for taking the time to learn a smarter way to organize your projects!
@@ -17,3 +19,7 @@ Here you'll find everything you need, broken down into short, clear, and focused
 5. **[Ecosystem and Tooling](ecosystem_and_tooling.md)** — Editor extensions and CLI tools. *(Coming soon)*
 
 *Ready? Pick a topic from the list above and let's dive into the details!*
+
+---
+
+👉 **Next step:** [Architecture and Decisions (ADR)](architecture_and_spec.md)

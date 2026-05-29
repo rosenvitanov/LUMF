@@ -1,5 +1,7 @@
 # Folder Structure in LUMF
 
+🌍 *[Български](folder_structure.bg.md)* | 🔙 *[Back to README](../README.md)* | 🚀 *[Getting Started](getting_started.md)*
+
 Although LUMF relies on YAML metadata for creating graph connections (via `parent` and `children`), maintaining a basic folder structure is highly recommended. It simplifies human navigation and basic filtering.
 
 ## Workspace Visual Graph
@@ -60,3 +62,7 @@ For those who prefer a classic text-based tree view, here is how the structure l
   * `templates/` - boilerplate `.md` files with generic YAML frontmatter for quick creation.
   * `cache/` - fast cache indexes for your search scripts.
   * `scripts/` - user-provided custom automation.
+
+---
+
+👉 **Next step:** [YAML Schema Specification](yaml_schema.md)
